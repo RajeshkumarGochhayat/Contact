@@ -29,7 +29,7 @@ export class ContactDto {
 
     @ValidateIf(o => o.type === 'academic')
     @IsNotEmpty({ message: 'ID Proof is required for academic type' })
-    id_proof: string;
+    id_proof?: string;
 
     @IsOptional()
     @IsString()
